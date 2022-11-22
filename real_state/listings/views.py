@@ -11,6 +11,17 @@ def listing_list(request):
     context = {
         "listings": listings
     }
-    
+
     # To return a response in Django is common to use the render
     return render(request, "listings.html", context)
+
+def listing_retrieve(request, pk):
+    listing =  Listing.objects.get(id=pk)
+
+    # Defining a dictionary
+    context = {
+        "listing": listing
+    }
+
+    # To return a response in Django is common to use the render
+    return render(request, "listing.html", context)
