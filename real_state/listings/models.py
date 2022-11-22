@@ -6,6 +6,7 @@ from django.db import models
 
 # The "Model" allows the class to be interpreted as a database table.
 class Listing(models.Model):
+    # THe model will create a id for us.
     title = models.CharField(max_length=150)
     price = models.IntegerField()
     num_bedrooms = models.IntegerField()
