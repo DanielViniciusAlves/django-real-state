@@ -3,9 +3,11 @@ from django.urls import path
 
 from listings.views import listing_list
 from listings.views import listing_retrieve
+from listings.views import listing_create
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', listing_list),
-    path('listings/<pk>/', listing_retrieve)
+    path('listings/<pk>/', listing_retrieve),
+    path('add-listing/', listing_create)
 ]
