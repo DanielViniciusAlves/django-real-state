@@ -1,5 +1,9 @@
-{{ listing.title }}
+{% extends 'base.html' %}
 
-${{ listing.price }}
+{% block content %}
+    {{ listing.title }}
 
-{{ listing.address }}
+    ${{ listing.price }}
+
+    {{ listing.address }}
+{% endblock content %}
